@@ -28,8 +28,11 @@ app.get('/', (req, res) => {
   res.render('loading'); // Show the loading screen first
 });
 
-app.get('/home', (req, res) => {
-  res.render('home'); // Show the loading screen first
+app.get('/home', async(req, res) => {
+  const totalrecord = await Log.countDocuments();
+  const blockrecord = await Log.countDocuments({blocked:1});
+  
+  res.render('home',{totalrecord ,blockrecord }); // Show the loading screen first
 });
 
 app.get('/rules', (req, res) => {
