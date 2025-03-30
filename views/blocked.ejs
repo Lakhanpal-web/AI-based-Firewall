@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blocked Sites - Firewall Agent</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Firewall Agent</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active">
+                    <a href="http://127.0.0.1:5000/dashboard">
+                        <span class="material-icons">dashboard</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/rules">
+                        <span class="material-icons">security</span>
+                        <span>Firewall Rules</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logs2">
+                        <span class="material-icons">history</span>
+                        <span>Logs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/blocked">
+                        <span class="material-icons">block</span>
+                        <span>Blocked Sites</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <button id="menu-toggle" class="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <h1>Blocked Sites</h1>
+                <button id="nav-toggle" class="nav-toggle">
+                    <span class="material-icons">visibility</span>
+                </button>
+            </header>
+
+            <!-- Blocked Sites Content -->
+            <div class="blocked-sites-content">
+                <div class="blocked-sites-header">
+                    <button class="btn primary add-site-btn">
+                        <span class="material-icons">add</span>
+                        Add Blocked Site
+                    </button>
+                </div>
+
+                <div class="blocked-sites-table-container">
+                    <table class="blocked-sites-table">
+                        <thead>
+                            <tr>
+                                <th>Site</th>
+                                <th>Category</th>
+                                <th>Blocked By</th>
+                                <th>Blocked On</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>malicious.com</td>
+                                <td><span class="category malware">Malware</span></td>
+                                <td>Admin</td>
+                                <td>2024-01-20</td>
+                                <td>
+                                    <button class="icon-btn"><span class="material-icons">edit</span></button>
+                                    <button class="icon-btn"><span class="material-icons">delete</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>phishing.com</td>
+                                <td><span class="category phishing">Phishing</span></td>
+                                <td>System</td>
+                                <td>2024-01-19</td>
+                                <td>
+                                    <button class="icon-btn"><span class="material-icons">edit</span></button>
+                                    <button class="icon-btn"><span class="material-icons">delete</span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixRain"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html> 

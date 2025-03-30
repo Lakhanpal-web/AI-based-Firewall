@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firewall Rules - Firewall Agent</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Firewall Agent</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active">
+                    <a href="http://127.0.0.1:5000/dashboard">
+                        <span class="material-icons">dashboard</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/rules">
+                        <span class="material-icons">security</span>
+                        <span>Firewall Rules</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logs2">
+                        <span class="material-icons">history</span>
+                        <span>Logs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/blocked">
+                        <span class="material-icons">block</span>
+                        <span>Blocked Sites</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <button id="menu-toggle" class="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <h1>Firewall Rules</h1>
+                <button id="nav-toggle" class="nav-toggle">
+                    <span class="material-icons">visibility</span>
+                </button>
+            </header>
+
+            <!-- Rules Content -->
+            <div class="rules-content">
+                <div class="rules-header">
+                    <button class="btn primary add-rule-btn">
+                        <span class="material-icons">add</span>
+                        Add New Rule
+                    </button>
+                </div>
+
+                <div class="rules-table-container">
+                    <table class="rules-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Source</th>
+                                <th>Destination</th>
+                                <th>Port</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Block Malicious Sites</td>
+                                <td>Block</td>
+                                <td>Any</td>
+                                <td>malicious.com</td>
+                                <td>Any</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <button class="icon-btn"><span class="material-icons">edit</span></button>
+                                    <button class="icon-btn"><span class="material-icons">delete</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Allow Internal Network</td>
+                                <td>Allow</td>
+                                <td>192.168.1.0/24</td>
+                                <td>internal-server</td>
+                                <td>80,443</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <button class="icon-btn"><span class="material-icons">edit</span></button>
+                                    <button class="icon-btn"><span class="material-icons">delete</span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixRain"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html> 

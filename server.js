@@ -32,7 +32,15 @@ app.get('/home', (req, res) => {
   res.render('home'); // Show the loading screen first
 });
 
-
+app.get('/rules', (req, res) => {
+  res.render('rules'); // Show the loading screen first
+});
+app.get('/blocked', (req, res) => {
+  res.render('blocked'); // Show the loading screen first
+});
+app.get('/logs2', (req, res) => {
+  res.render('logs'); // Show the loading screen first
+});
 
 
 // 🔥 **Dashboard Route**
@@ -45,6 +53,15 @@ app.get("/dashboard", async (req, res) => {
     res.status(500).send("Failed to load dashboard");
   }
 });
+
+
+
+
+
+
+
+
+
 
 // 🔥 **AI Traffic Prediction (`/predict`)**
 app.post("/predict", async (req, res) => {

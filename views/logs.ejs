@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs - Firewall Agent</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Firewall Agent</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active">
+                    <a href="http://127.0.0.1:5000/dashboard">
+                        <span class="material-icons">dashboard</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/rules">
+                        <span class="material-icons">security</span>
+                        <span>Firewall Rules</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logs2">
+                        <span class="material-icons">history</span>
+                        <span>Logs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/blocked">
+                        <span class="material-icons">block</span>
+                        <span>Blocked Sites</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <button id="menu-toggle" class="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <h1>Logs</h1>
+                <button id="nav-toggle" class="nav-toggle">
+                    <span class="material-icons">visibility</span>
+                </button>
+            </header>
+
+            <!-- Logs Content -->
+            <div class="logs-content">
+                <!-- Filters -->
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label>Date Range</label>
+                        <div class="date-inputs">
+                            <input type="date" class="date-input date-filter">
+                            <span class="material-icons">arrow_forward</span>
+                            <input type="date" class="date-input date-filter">
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Severity</label>
+                        <select class="filter-select severity-filter">
+                            <option value="all">All</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Action</label>
+                        <select class="filter-select category-filter">
+                            <option value="all">All</option>
+                            <option value="blocked">Blocked</option>
+                            <option value="allowed">Allowed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Logs Table -->
+                <div class="logs-table-container">
+                    <table class="logs-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Source</th>
+                                <th>Destination</th>
+                                <th>Action</th>
+                                <th>Rule</th>
+                                <th>Severity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-01-20 10:15:30</td>
+                                <td>192.168.1.100</td>
+                                <td>malicious.com</td>
+                                <td><span class="status blocked">Blocked</span></td>
+                                <td>Block Malicious Sites</td>
+                                <td><span class="severity high">High</span></td>
+                            </tr>
+                            <tr>
+                                <td>2024-01-20 10:14:25</td>
+                                <td>192.168.1.101</td>
+                                <td>internal-server</td>
+                                <td><span class="status allowed">Allowed</span></td>
+                                <td>Allow Internal Network</td>
+                                <td><span class="severity low">Low</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixRain"></canvas>
+
+    <script src="script2.js"></script>
+</body>
+</html> 
