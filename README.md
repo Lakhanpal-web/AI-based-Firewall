@@ -1,85 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Powered Application Firewall - README</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        code {
-            background-color: #eee;
-            padding: 5px;
-            border-radius: 3px;
-        }
-        .container {
-            max-width: 900px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        pre {
-            background: #222;
-            color: #fff;
-            padding: 10px;
-            overflow-x: auto;
-            border-radius: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #555;
-            color: white;
-        }
-        .highlight {
-            background-color: #ffd700;
-            padding: 5px;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
+# AI-Powered Application Firewall
 
-<div class="container">
-    <h1>🔥 AI-Powered Application Firewall</h1>
-    <p>A real-time, AI-driven firewall that monitors and controls network traffic, enforces policies per application, and detects anomalies.</p>
+A real-time, AI-driven firewall that monitors and controls network traffic, enforces policies per application, and detects anomalies.
 
-    <h2>🚀 Features</h2>
-    <ul>
-        <li>✅ *Application-Based Firewall Policies* – Restrict IPs, domains, and protocols per app.</li>
-        <li>✅ *Centralized Web Console* – Manage firewall rules and monitor logs.</li>
-        <li>✅ *Real-time Traffic Monitoring* – Tracks app-based network activity.</li>
-        <li>✅ *AI/ML-based Anomaly Detection* – Identifies suspicious behavior and blocks traffic.</li>
-        <li>✅ *Windows Compatibility* – Works on Windows endpoints.</li>
-    </ul>
+## 🚀 Features
+- ✅ *Application-Based Firewall Policies* – Restrict IPs, domains, and protocols per app.
+- ✅ *Centralized Web Console* – Manage firewall rules and monitor logs.
+- ✅ *Real-time Traffic Monitoring* – Tracks app-based network activity.
+- ✅ *AI/ML-based Anomaly Detection* – Identifies suspicious behavior and blocks traffic.
+- ✅ *Windows Compatibility* – Works on Windows endpoints.
 
-    <h2>🛠 Tech Stack</h2>
-    <ul>
-        <li><strong>Backend:</strong> Node.js (Express.js), Python</li>
-        <li><strong>Frontend:</strong> EJS, Tailwind CSS</li>
-        <li><strong>Database:</strong> MongoDB</li>
-        <li><strong>Firewall Agent:</strong> Python (psutil, socket, requests)</li>
-        <li><strong>AI/ML:</strong> Scikit-learn</li>
-    </ul>
+## 🛠 Tech Stack
+- *Backend:* Node.js (Express.js), Python
+- *Frontend:* EJS, Tailwind CSS
+- *Database:* MongoDB
+- *Firewall Agent:* Python (psutil, socket, requests)
+- *AI/ML:* Scikit-learn
 
-    <h2>📂 Project Structure</h2>
-    <pre>
+## 📂 Project Structure
+
 /firewall-agent       # Python-based firewall agent  
     firewall.py       # Monitors and enforces policies  
     predict.py        # AI anomaly detection  
@@ -87,88 +25,67 @@
 /views                # EJS templates for the dashboard  
 /public               # Static assets (CSS, JS)  
 server.js             # Express.js backend server  
-README.html           # Project documentation  
-    </pre>
+README.md             # Project documentation  
 
-    <h2>🔧 Installation & Setup</h2>
-    <h3>1️⃣ Install Dependencies</h3>
-    <p>Ensure you have <span class="highlight">Python 3.10+</span>, <span class="highlight">Node.js</span>, and <span class="highlight">MongoDB</span> installed.</p>
 
-    <h4>Backend (Node.js Server)</h4>
-    <pre>npm install</pre>
+## 🔧 Installation & Setup
 
-    <h4>Firewall Agent (Python)</h4>
-    <pre>pip install psutil requests scikit-learn pandas</pre>
+### 1️⃣ Install Dependencies
+Ensure you have *Python 3.10+, **Node.js, and **MongoDB* installed.
 
-    <h3>2️⃣ Run MongoDB Locally</h3>
-    <pre>mongod --dbpath /path/to/database</pre>
+#### Backend (Node.js Server)
+sh
+npm install
 
-    <h3>3️⃣ Start the Web Server</h3>
-    <pre>node server.js</pre>
 
-    <h3>4️⃣ Run the Firewall Agent</h3>
-    <pre>python firewall.py</pre>
+#### Firewall Agent (Python)
+sh
+pip install psutil requests scikit-learn pandas
 
-    <h2>🖥 Dashboard & API Endpoints</h2>
-    <h3>Web Dashboard</h3>
-    <p><a href="http://127.0.0.1:5000/dashboard">http://127.0.0.1:5000/dashboard</a></p>
 
-    <h3>API Routes</h3>
-    <table>
-        <tr>
-            <th>Method</th>
-            <th>Endpoint</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>GET</td>
-            <td>/logs</td>
-            <td>Get latest firewall logs</td>
-        </tr>
-        <tr>
-            <td>GET</td>
-            <td>/policies</td>
-            <td>Fetch firewall policies</td>
-        </tr>
-        <tr>
-            <td>POST</td>
-            <td>/policies</td>
-            <td>Update firewall policies</td>
-        </tr>
-        <tr>
-            <td>POST</td>
-            <td>/predict</td>
-            <td>AI-based traffic analysis</td>
-        </tr>
-        <tr>
-            <td>POST</td>
-            <td>/log</td>
-            <td>Log network activity</td>
-        </tr>
-    </table>
+### 2️⃣ Run MongoDB Locally
+sh
+mongod --dbpath /path/to/database
 
-    <h2>⚡ How It Works</h2>
-    <ol>
-        <li>🔍 The firewall agent <strong>monitors active network connections</strong>.</li>
-        <li>📡 It <strong>fetches policies</strong> from the centralized server.</li>
-        <li>🚨 If a connection matches <span class="highlight">blocked rules</span>, it is <strong>blocked</strong> via Windows Firewall.</li>
-        <li>📜 The decision (<span class="highlight">allow/block</span>) is <strong>logged</strong> in MongoDB.</li>
-        <li>🤖 AI detects anomalies and <strong>blocks suspicious traffic</strong>.</li>
-    </ol>
 
-    <h2>🎯 Future Improvements</h2>
-    <ul>
-        <li>✅ Per-application firewall rules</li>
-        <li>✅ Advanced AI model for anomaly detection</li>
-        <li>✅ Linux support</li>
-        <li>✅ Real-time alerts via email/slack</li>
-    </ul>
+### 3️⃣ Start the Web Server
+sh
+node server.js
 
-    <h2>🤝 Contributors</h2>
-    <p>👤 <strong>Your Name</strong></p>
 
-    <p>🔥 Built in 24 hours during a hackathon! 🚀 Hope you like it! 😃</p>
-</div>
+### 4️⃣ Run the Firewall Agent
+sh
+python firewall.py
 
-</body>
-</html>
+
+## 🖥 Dashboard & API Endpoints
+
+### Web Dashboard
+[http://127.0.0.1:5000/dashboard](http://127.0.0.1:5000/dashboard)
+
+### API Routes
+| Method | Endpoint   | Description                 |
+|--------|-----------|-----------------------------|
+| GET    | /logs     | Get latest firewall logs    |
+| GET    | /policies | Fetch firewall policies     |
+| POST   | /policies | Update firewall policies    |
+| POST   | /predict  | AI-based traffic analysis   |
+| POST   | /log      | Log network activity        |
+
+## ⚡ How It Works
+1. 🔍 The firewall agent *monitors active network connections*.
+2. 📡 It *fetches policies* from the centralized server.
+3. 🚨 If a connection matches *blocked rules, it is **blocked* via Windows Firewall.
+4. 📜 The decision (*allow/block) is **logged* in MongoDB.
+5. 🤖 AI detects anomalies and *blocks suspicious traffic*.
+
+## 🎯 Future Improvements
+- ✅ Per-application firewall rules
+- ✅ Advanced AI model for anomaly detection
+- ✅ Linux support
+- ✅ Real-time alerts via email/slack
+
+## 🤝 Contributors
+👤 *Your Name*
+
+🔥 Built in 24 hours during a hackathon! 🚀 Hope you like it! 😃
