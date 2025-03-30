@@ -16,13 +16,32 @@
             </div>
 
             <ul class="nav-links">
-                
+                <!--  -->
+                <li>
+                    <a href="/home">
+                        <span class="material-icons">block</span>
+                        <span>OVERVIEW</span>
+                    </a>
+                </li>   
+                <!--  -->
+
                 <li class="active">
                     <a href="http://127.0.0.1:5000/dashboard">
                         <span class="material-icons">dashboard</span>
                         <span>Dashboard</span>
                     </a>
                 </li>
+                <!--  -->
+                <!-- <li>
+                    <a href="/home">
+                        <span class="material-icons">block</span>
+                        <span>OVERVIEW</span>
+                    </a>
+                </li> -->
+
+                <!--  -->
+
+
                 <li>
                     <a href="/rules">
                         <span class="material-icons">security</span>
@@ -35,12 +54,12 @@
                         <span>Logs</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="/home">
                         <span class="material-icons">block</span>
                         <span>OVERVIEW</span>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
 
@@ -125,5 +144,8 @@
     <canvas id="matrixRain"></canvas>
 
     <script src="javascripts/script2.js"></script>
+    <script>setInterval(() => { fetchLogs(); fetchPolicies(); }, 2000);
+        fetchLogs();
+        fetchPolicies();</script>
 </body>
 </html> 
