@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firewall Loading</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       
+        /* Matrix effect */
+        .matrix {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Place behind other content */
+        }
+
+        .matrix span {
+            color: #00ff00; /* Green color for Matrix text */
+            white-space: nowrap;
+            position: absolute;
+            bottom: 100%; /* Start from the bottom */
+            animation: fall linear infinite; /* Apply falling animation */
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); } /* Move to the bottom of the viewport */
+        }
+
+        #center_load {
+            display: flex;
+            flex-direction: column; /* Stack loader and text vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            height: 100vh; /* Ensure it takes full height for centering */
+            animation: fadeIn 1s; /* Added fade-in effect */
+        }
+
+        .loader {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #ff4500;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite; /* Ensure loader revolves */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix bg-gray-900">
+        <span style="left: 10%; animation-duration: 5s; animation-delay: 0s;">0</span>
+        <span style="left: 20%; animation-duration: 7s; animation-delay: 1s;">1</span>
+        <span style="left: 30%; animation-duration: 6s; animation-delay: 2s;">0</span>
+        <span style="left: 40%; animation-duration: 8s; animation-delay: 3s;">1</span>
+        <span style="left: 50%; animation-duration: 5s; animation-delay: 4s;">0</span>
+        <span style="left: 60%; animation-duration: 7s; animation-delay: 0s;">1</span>
+        <span style="left: 70%; animation-duration: 6s; animation-delay: 1s;">0</span>
+        <span style="left: 80%; animation-duration: 8s; animation-delay: 2s;">1</span>
+        <span style="left: 90%; animation-duration: 5s; animation-delay: 3s;">0</span>
+        <span style="left: 100%; animation-duration: 7s; animation-delay: 4s;">1</span>
+    </div>
+    <div id="center_load">
+        <div class="loader"></div>
+        <div><p style="color: #f3f3f3;">Loading Firewall Dashboard...</p></div>
+    </div>
+    <script>
+        setTimeout(() => {
+            window.location.href = "/dashboard"; // Redirect to dashboard.ejs after 3 seconds
+        }, 3000);
+    </script>
+
+</body>
+</html>
