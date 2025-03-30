@@ -30,9 +30,10 @@ app.get('/', (req, res) => {
 
 app.get('/home', async(req, res) => {
   const totalrecord = await Log.countDocuments();
-  const blockrecord = await Log.countDocuments({blocked:1});
+  const blockrecord = await Log.countDocuments({decision:"block"});
+  const allowrecord = await Log.countDocuments({decision:"allow"});
   
-  res.render('home',{totalrecord ,blockrecord }); // Show the loading screen first
+  res.render('home',{totalrecord ,blockrecord,allowrecord }); // Show the loading screen first
 });
 
 app.get('/rules', (req, res) => {
