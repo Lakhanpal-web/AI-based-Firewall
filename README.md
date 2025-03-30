@@ -34,30 +34,26 @@ README.md             # Project documentation
 Ensure you have *Python 3.10+, **Node.js, and **MongoDB* installed.
 
 #### Backend (Node.js Server)
-sh
 npm install
 
 
 #### Firewall Agent (Python)
-sh
 pip install psutil requests scikit-learn pandas
 
 
 ### 2️⃣ Run MongoDB Locally
-sh
 mongod --dbpath /path/to/database
 
 
 ### 3️⃣ Start the Web Server
-sh
 node server.js
 
 
 ### 4️⃣ Run the Firewall Agent
-sh
 python firewall.py
+
+
 ### 4️⃣ Run the app_tracker
-sh
 python app_tracker.py
 
 
