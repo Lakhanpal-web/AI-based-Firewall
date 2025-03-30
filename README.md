@@ -56,6 +56,9 @@ node server.js
 ### 4️⃣ Run the Firewall Agent
 sh
 python firewall.py
+### 4️⃣ Run the app_tracker
+sh
+python app_tracker.py
 
 
 ## 🖥 Dashboard & API Endpoints
