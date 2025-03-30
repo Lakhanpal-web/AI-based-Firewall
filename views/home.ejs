@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firewall Agent Dashboard</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Firewall Agent</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active">
+                    <a href="http://127.0.0.1:5000/dashboard">
+                        <span class="material-icons">dashboard</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#rules">
+                        <span class="material-icons">security</span>
+                        <span>Firewall Rules</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#logs">
+                        <span class="material-icons">history</span>
+                        <span>Logs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#blocked">
+                        <span class="material-icons">block</span>
+                        <span>Blocked Sites</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <button id="menu-toggle" class="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <h1>Dashboard</h1>
+                <button id="nav-toggle" class="nav-toggle">
+                    <span class="material-icons">visibility</span>
+                </button>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="color: #2196f3;">
+                            <span class="material-icons">security</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Active Rules</h3>
+                            <p>24</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="color: #f44336;">
+                            <span class="material-icons">block</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Blocked Sites</h3>
+                            <p>156</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="color: #ff9800;">
+                            <span class="material-icons">warning</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Security Alerts</h3>
+                            <p>3</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="color: #4caf50;">
+                            <span class="material-icons">speed</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3>System Status</h3>
+                            <p>Healthy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions and Recent Activity -->
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h2>Quick Actions</h2>
+                        <div class="action-buttons">
+                            <button class="btn primary">Add New Rule</button>
+                            <button class="btn secondary">View Logs</button>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h2>Recent Activity</h2>
+                        <ul class="activity-list">
+                            <li>New firewall rule added: Block access to example.com</li>
+                            <li>Security alert: Multiple failed login attempts detected</li>
+                            <li>System update completed successfully</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixRain"></canvas>
+
+    <script src="javascripts/script2.js"></script>
+</body>
+</html> 

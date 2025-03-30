@@ -9,6 +9,9 @@ const Policy = require("./models/Policy"); // Import Policy Model
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
@@ -25,7 +28,9 @@ app.get('/', (req, res) => {
   res.render('loading'); // Show the loading screen first
 });
 
-
+app.get('/home', (req, res) => {
+  res.render('home'); // Show the loading screen first
+});
 
 
 
